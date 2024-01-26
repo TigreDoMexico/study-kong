@@ -17,5 +17,13 @@ services:
     networks:
       - estudo-kong-network
 
+  usuario-api-3:
+    image: estudo-kong-api-3
+    container_name: usuario-api-3
+    ports:
+      - "5003:8080"
+    networks:
+      - estudo-kong-network
+
 networks:
   estudo-kong-network:
