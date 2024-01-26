@@ -1,0 +1,21 @@
+version: '1.0'
+
+services:
+  usuario-api-1:
+    image: estudo-kong-api-1
+    container_name: usuario-api-1
+    ports:
+      - "5001:80"
+    networks:
+      - estudo-kong-network
+
+  usuario-api-2:
+    image: estudo-kong-api-2
+    container_name: usuario-api-2
+    ports:
+      - "5002:8080"
+    networks:
+      - estudo-kong-network
+
+networks:
+  estudo-kong-network:

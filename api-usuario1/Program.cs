@@ -16,7 +16,8 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI();
 }
 
-app.UseHttpsRedirection();
+// TODO: Usar HTTPS depois
+// app.UseHttpsRedirection();
 
 app.UseAuthorization();
 
