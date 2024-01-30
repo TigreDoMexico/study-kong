@@ -1,0 +1,21 @@
+_format_version: "2.1"
+
+services:
+  - name: api-usuario1
+    url: http://host.docker.internal:5001
+    routes:
+      - name: usuario1-route
+        paths:
+          - /usuario
+  - name: api-usuario2
+    url: http://host.docker.internal:5002
+    routes:
+      - name: usuario2-route
+        paths:
+          - /api/usuario
+  - name: api-usuario3
+    url: http://host.docker.internal:5003
+    routes:
+      - name: usuario3-route
+        paths:
+          - /usuario
