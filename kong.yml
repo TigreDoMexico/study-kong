@@ -1,21 +1,26 @@
 _format_version: "2.1"
 
 services:
-  - name: api-usuario1
-    url: http://host.docker.internal:5001
+  - name: usuario-api-1
+    url: http://usuario-api-1:80
     routes:
-      - name: usuario1-route
+      - name: usuario-api-1-route
         paths:
-          - /usuario
-  - name: api-usuario2
-    url: http://host.docker.internal:5002
+        - /api1
+        strip_path: true
+  
+  - name: usuario-api-2
+    url: http://usuario-api-2:8080
     routes:
-      - name: usuario2-route
+      - name: usuario-api-2-route
         paths:
-          - /api/usuario
-  - name: api-usuario3
-    url: http://host.docker.internal:5003
+        - /api2
+        strip_path: true
+
+  - name: usuario-api-3
+    url: http://usuario-api-3:8080
     routes:
-      - name: usuario3-route
+      - name: usuario-api-3-route
         paths:
-          - /usuario
+        - /api3
+        strip_path: true
