@@ -1,0 +1,10 @@
+@base_url = http:localhost:8000
+
+GET {{{base_url}}}/api1/usuario
+Accept: application/json
+
+GET {{{base_url}}}/api2/api/usuario
+Accept: application/json
+
+GET {{{base_url}}}/api3/usuario
+Accept: application/json
