@@ -8,7 +8,12 @@ services:
         paths:
         - /api1
         strip_path: true
-  
+    plugins:
+      - name: kong-tigre-header
+        config:
+          request_header: Request-De-Estudo
+          response_header: Response-De-Estudo
+
   - name: usuario-api-2
     url: http://usuario-api-2:8080
     routes:
